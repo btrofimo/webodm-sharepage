@@ -9,21 +9,45 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				overflow: hidden;
+			}
+
+			main {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			.webodm-container {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			.webodm-container iframe {
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+		</style>
 	</head>
 	<body>
-		<Header />
 		<main>
 			<div class="webodm-container">
 				<iframe
 					scrolling="no"
 					title="WebODM"
-					width="61.8033%"
-					height="360"
 					frameBorder="0"
 					src="https://cloud1.webodm.net/public/project/4b92b2ed-031d-4955-a5f0-15858923c783/iframe/map/?t=orthophoto">
 				</iframe>
 			</div>
 		</main>
-		<Footer />
 	</body>
 </html>
